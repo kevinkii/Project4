@@ -104,8 +104,17 @@ data.tail(10).plot.bar(x='Major', y='ShareWomen')
 data[:10].plot.bar(x='Major', y='ShareMen')
 
 #%% [markdown]
+# We can see that the proportion of Women in the major of *Early Childhood Education* and *COmmunication Disorders Sciences and Services* have nearly 100%. With the histogram, we observe that most majors that are prominently female are related to family education and health industry. Regarding the majors that are prominently male, *Military Technology* stays at top, which is nearly 100% of male. Those majors are mostly related to technology and engineering.
+
+#%% [markdown]
 # # Students by Major
 # Lastly, we will employ the bar plot to show the number of students by each major.
 
+#%%
+data1 = recent_grads[["Major","Total"]]
+data1 = data1.sort_values(by="Total")
+data1[:10].plot.bar(x="Major", y="Total")
+data1.tail(10).plot.bar(x="Major", y="Total")
+
 #%% [markdown]
-# CONCLUSION
+# Through the histogram, the top 10 majors where have the most students enrolled are listed in the graph. *Psychology* major has the most students, where *Military Technologies* major has the least students.
